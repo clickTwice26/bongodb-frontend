@@ -1,10 +1,31 @@
 import type { Metadata } from "next";
-import { Anek_Bangla } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const anekBangla = Anek_Bangla({
-  variable: "--font-anek-bangla",
-  subsets: ["bengali"],
+const julyIctd = localFont({
+  src: [
+    {
+      path: "../../public/fonts/JulyICTD/July-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/JulyICTD/July-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/JulyICTD/July-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/JulyICTD/July-Bold-Italic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-july-ictd",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="bn" suppressHydrationWarning>
       <body
-        className={`${anekBangla.variable} antialiased font-sans`}
+        className={`${julyIctd.variable} antialiased font-sans`}
       >
         <ThemeProvider
           attribute="class"
