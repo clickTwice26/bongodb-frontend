@@ -61,12 +61,6 @@ export default function Home() {
                 {t.nav.docs}
               </Link>
               <Link
-                href="/pricing"
-                className="transition-colors hover:text-foreground/80 text-foreground/60"
-              >
-                {t.nav.pricing}
-              </Link>
-              <Link
                 href="/blog"
                 className="transition-colors hover:text-foreground/80 text-foreground/60"
               >
@@ -107,7 +101,7 @@ export default function Home() {
       </header>
       <main className="flex-1">
         <section className="relative space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-20 overflow-hidden">
-          <div className="absolute inset-0 z-0 pointer-events-none" style={{ opacity: 0.5 }}>
+          <div className="absolute inset-0 z-0 pointer-events-none" style={{ opacity: 0.8 }}>
             <PixelBlast
               variant="circle"
               pixelSize={4}
