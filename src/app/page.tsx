@@ -18,7 +18,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/components/language-provider";
 import { translations } from "@/lib/translations";
-import Cubes from "@/components/ui/Cubes";
+import PixelBlast from "@/components/ui/PixelBlast";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -107,20 +107,19 @@ export default function Home() {
       </header>
       <main className="flex-1">
         <section className="relative space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-20 overflow-hidden">
-          <div className="absolute inset-0 z-0 flex items-center justify-center opacity-30 pointer-events-none">
-            <div style={{ height: '600px', width: '100%', maxWidth: '800px', position: 'relative' }}>
-              <Cubes
-                gridSize={8}
-                maxAngle={60}
-                radius={4}
-                borderStyle="2px dashed #0ba5e9"
-                faceColor="#transparent"
-                rippleColor="#0ba5e9"
-                rippleSpeed={1.5}
-                autoAnimate={true}
-                rippleOnClick={true}
-              />
-            </div>
+          <div className="absolute inset-0 z-0 pointer-events-none" style={{ opacity: 0.5 }}>
+            <PixelBlast
+              variant="circle"
+              pixelSize={4}
+              color="#0ba5e9"
+              patternScale={2}
+              patternDensity={1.5}
+              pixelSizeJitter={0.3}
+              enableRipples={false}
+              speed={0.3}
+              edgeFade={0}
+              transparent
+            />
           </div>
           <motion.div
             className="container relative z-10 mx-auto flex flex-col items-center gap-4 text-center"
